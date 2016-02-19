@@ -108,6 +108,8 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
     self.dismissType = KLCPopupDismissTypeShrinkOut;
     self.maskType = KLCPopupMaskTypeDimmed;
     self.dimmedMaskAlpha = 0.5;
+      
+    self.dismissAnimationTime = 0.2;
     
     _isBeingShown = NO;
     _isShowing = NO;
@@ -270,7 +272,7 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
       
       if (animated && (_showType != KLCPopupShowTypeNone)) {
         // Make fade happen faster than motion. Use linear for fades.
-        [UIView animateWithDuration:0.15
+        [UIView animateWithDuration:self.dismissAnimationTime
                               delay:0
                             options:UIViewAnimationOptionCurveLinear
                          animations:backgroundAnimationBlock
@@ -302,7 +304,7 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
       if (animated) {
         switch (_dismissType) {
           case KLCPopupDismissTypeFadeOut: {
-            [UIView animateWithDuration:0.15
+            [UIView animateWithDuration:self.dismissAnimationTime
                                   delay:0
                                 options:UIViewAnimationOptionCurveLinear
                              animations:^{
@@ -312,7 +314,7 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
           }
             
           case KLCPopupDismissTypeGrowOut: {
-            [UIView animateWithDuration:0.15
+            [UIView animateWithDuration:self.dismissAnimationTime
                                   delay:0
                                 options:kAnimationOptionCurveIOS7
                              animations:^{
@@ -323,7 +325,7 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
           }
             
           case KLCPopupDismissTypeShrinkOut: {
-            [UIView animateWithDuration:0.15
+            [UIView animateWithDuration:self.dismissAnimationTime
                                   delay:0
                                 options:kAnimationOptionCurveIOS7
                              animations:^{
@@ -334,7 +336,7 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
           }
             
           case KLCPopupDismissTypeSlideOutToTop: {
-            [UIView animateWithDuration:0.30
+            [UIView animateWithDuration:self.dismissAnimationTime
                                   delay:0
                                 options:kAnimationOptionCurveIOS7
                              animations:^{
@@ -347,7 +349,7 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
           }
             
           case KLCPopupDismissTypeSlideOutToBottom: {
-            [UIView animateWithDuration:0.30
+            [UIView animateWithDuration:self.dismissAnimationTime
                                   delay:0
                                 options:kAnimationOptionCurveIOS7
                              animations:^{
@@ -360,7 +362,7 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
           }
             
           case KLCPopupDismissTypeSlideOutToLeft: {
-            [UIView animateWithDuration:0.30
+            [UIView animateWithDuration:self.dismissAnimationTime
                                   delay:0
                                 options:kAnimationOptionCurveIOS7
                              animations:^{
@@ -373,7 +375,7 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
           }
             
           case KLCPopupDismissTypeSlideOutToRight: {
-            [UIView animateWithDuration:0.30
+            [UIView animateWithDuration:self.dismissAnimationTime
                                   delay:0
                                 options:kAnimationOptionCurveIOS7
                              animations:^{

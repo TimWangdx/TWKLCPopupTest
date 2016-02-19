@@ -92,11 +92,12 @@
     // 自定义动画效果的popup
     KLCPopup *popup = [KLCPopup popupWithContentView:contentView
                                             showType:KLCPopupShowTypeBounceIn
-                                         dismissType:KLCPopupDismissTypeBounceOut
+                                         dismissType:KLCPopupDismissTypeFadeOut
                                             maskType:KLCPopupMaskTypeGradient
                             dismissOnBackgroundTouch:NO
                                dismissOnContentTouch:NO];
     //popup.backGroundViewColor = [UIColor whiteColor];
+    popup.dismissAnimationTime = 0.6;
     
     // 自定义位置
     KLCPopupLayout layout = KLCPopupLayoutMake(KLCPopupHorizontalLayoutLeft, KLCPopupVerticalLayoutBottom);
