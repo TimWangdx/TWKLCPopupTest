@@ -17,6 +17,7 @@
 		EB49D58A1C76E11F00DDB058 /* TWKLCPopupTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB49D5891C76E11F00DDB058 /* TWKLCPopupTestUITests.m */; };
 		EB49D59E1C76E1C800DDB058 /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = EB49D59D1C76E1C800DDB058 /* KLCPopup.m */; };
 		EB49D5A01C76F17B00DDB058 /* test.PNG in Resources */ = {isa = PBXBuildFile; fileRef = EB49D59F1C76F17B00DDB058 /* test.PNG */; };
+		EB49D5A31C76F6F000DDB058 /* TWBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB49D5A21C76F6F000DDB058 /* TWBackgroundView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		EB49D59C1C76E1C800DDB058 /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
 		EB49D59D1C76E1C800DDB058 /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
 		EB49D59F1C76F17B00DDB058 /* test.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test.PNG; sourceTree = "<group>"; };
+		EB49D5A11C76F6F000DDB058 /* TWBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWBackgroundView.h; sourceTree = "<group>"; };
+		EB49D5A21C76F6F000DDB058 /* TWBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWBackgroundView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +155,8 @@
 			children = (
 				EB49D59C1C76E1C800DDB058 /* KLCPopup.h */,
 				EB49D59D1C76E1C800DDB058 /* KLCPopup.m */,
+				EB49D5A11C76F6F000DDB058 /* TWBackgroundView.h */,
+				EB49D5A21C76F6F000DDB058 /* TWBackgroundView.m */,
 			);
 			path = KLCPopup;
 			sourceTree = "<group>";
@@ -288,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB49D56C1C76E11F00DDB058 /* ViewController.m in Sources */,
+				EB49D5A31C76F6F000DDB058 /* TWBackgroundView.m in Sources */,
 				EB49D5691C76E11F00DDB058 /* AppDelegate.m in Sources */,
 				EB49D5661C76E11F00DDB058 /* main.m in Sources */,
 				EB49D59E1C76E1C800DDB058 /* KLCPopup.m in Sources */,

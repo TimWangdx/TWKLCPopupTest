@@ -23,6 +23,7 @@
 
 
 #import "KLCPopup.h"
+#import "TWBackgroundView.h"
 
 static NSInteger const kAnimationOptionCurveIOS7 = (7 << 16);
 
@@ -45,7 +46,7 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
 
 @interface KLCPopup () {
   // views
-  UIView* _backgroundView;
+  TWBackgroundView* _backgroundView;
   UIView* _containerView;
   
   // state flags
@@ -112,7 +113,7 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
     _isShowing = NO;
     _isBeingDismissed = NO;
     
-    _backgroundView = [[UIView alloc] init];
+    _backgroundView = [[TWBackgroundView alloc] init];
     _backgroundView.backgroundColor = [UIColor clearColor];
     _backgroundView.userInteractionEnabled = NO;
     _backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -577,6 +578,9 @@ const KLCPopupLayout KLCPopupLayoutCenter = { KLCPopupHorizontalLayoutCenter, KL
                 [self addSubview:toolbar];
                 self.toolbar = toolbar;
 #endif
+            }else if(_maskType == KLCPopupMaskTypeGradient){
+                //Gradient colours
+                _backgroundView.dimBackground = YES;
             }else {
                 _backgroundView.backgroundColor = [UIColor clearColor];
             }

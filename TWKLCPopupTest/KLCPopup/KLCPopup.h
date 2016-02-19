@@ -87,6 +87,7 @@ typedef NS_ENUM(NSInteger, KLCPopupMaskType) {
 	KLCPopupMaskTypeClear, // Don't allow interaction with underlying views.
 	KLCPopupMaskTypeDimmed, // Don't allow interaction with underlying views, dim background.
     KLCPopupMaskTypeBlur, // 毛玻璃效果
+    KLCPopupMaskTypeGradient, // 渐变色效果
 };
 
 // KLCPopupLayout structure and maker functions

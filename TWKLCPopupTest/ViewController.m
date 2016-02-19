@@ -93,7 +93,7 @@
     KLCPopup *popup = [KLCPopup popupWithContentView:contentView
                                             showType:KLCPopupShowTypeBounceIn
                                          dismissType:KLCPopupDismissTypeBounceOut
-                                            maskType:KLCPopupMaskTypeBlur
+                                            maskType:KLCPopupMaskTypeGradient
                             dismissOnBackgroundTouch:NO
                                dismissOnContentTouch:NO];
     //popup.backGroundViewColor = [UIColor whiteColor];
